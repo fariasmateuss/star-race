@@ -4,7 +4,7 @@
 :root {
   --pink: #f21d7a;
   --aqua: aqua;
-  --car: url(/app/img/car.png);
+  --car: url(./img/car.png);
   --borderAnimation: border 1s linear infinite;
   --animationTime: 1.5s;
 }
@@ -261,23 +261,23 @@ body {
 }
 
 .cracked-one:before {
-  background-image: url(/app/assets/cracked-one.png)
+  background-image: url(./assets/cracked-one.png)
 }
 
 .cracked-two:before {
-  background-image: url(/app/assets/cracked-two.png)
+  background-image: url(./assets/cracked-two.png)
 }
 
 .cracked-three:before {
-  background-image: url(/app/assets/cracked-three.png)
+  background-image: url(./assets/cracked-three.png)
 }
 
 .cracked-four:before {
-  background-image: url(/app/assets/cracked-four.png)
+  background-image: url(./assets/cracked-four.png)
 }
 
 .cracked-five:before {
-  background-image: url(/app/assets/cracked-five.png)
+  background-image: url(./assets/cracked-five.png)
 }
 
 #gauge {
@@ -291,26 +291,26 @@ body {
 }
 
 .gauge-one {
-  background-image: url(/app/assets/gauge-one.png);  
+  background-image: url(./assets/gauge-one.png);  
 }
 
 .gauge-two {
-  background-image: url(/app/assets/gauge-two.png);
+  background-image: url(./assets/gauge-two.png);
   animation: wha 1s linear forwards;
 }
 
 .gauge-three {
-  background-image:url(/app/assets/gauge-three.png);
+  background-image:url(./assets/gauge-three.png);
   animation: wha2 1s linear forwards;
 }
 
 .gauge-four {
-  background-image:url(/app/assets/gauge-four.png);
+  background-image:url(./assets/gauge-four.png);
   animation: wha3 1s linear forwards;
 }
 
 .gauge-five {
-  background-image:url(/app/assets/gauge-five.png);
+  background-image:url(./assets/gauge-five.png);
   animation: wha4 1s linear infinite;
 }
 
@@ -449,7 +449,7 @@ body {
     ellipse at center,
   rgba(0,0,0,0.6) 80%, 
   rgba(0,0,0,1) 100%), 
-    url(/app/img/bg.jpg);
+    url(./img/bg.jpg);
   background-size: cover;
   min-height: 100vh;
   overflow: hidden;
