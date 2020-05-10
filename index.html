@@ -1,76 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta property="og:title" content="Star Race. The Video Game"/>
-  <meta property="og:description" content="Game built with HTML, CSS and JavaScript. Code on GitHub."/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://fariasmateuss.github.io/star-race/"/>
-  <meta property="og:image" content=""/>
-  <meta name="description" content="Star Race. The Video Game">
-  <meta name="keywords" content="Star Race, Game, Gaming, Race, HTML, CSS, JavaScript, GitHub">
-  <meta name="author" content="Mateus V. Farias">
-  <link rel="stylesheet" href="/app/style.css">
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta property="og:title" content="Star Race. The Video Game" />
+    <meta
+      property="og:description"
+      content="Game built with HTML, CSS and JavaScript. Code on GitHub."
+    />
+    <meta property="og:type" content="game" />
+    <meta
+      property="og:url"
+      content="https://fariasmateuss.github.io/star-race/"
+    />
 
-  <title>Star Race</title>
-</head>
+    <meta
+      name="description"
+      content="Star Race. The Video Game. An game created using HTML5, CSS3 and JavaScript."
+    />
+    <meta
+      name="keywords"
+      content="Star Race, Game, Gaming, Race, HTML, CSS, JavaScript, GitHub"
+    />
+    <meta name="author" content="Mateus V. Farias" />
 
-<body>
-  <main id="game-container" class="wrapper">
-    <section>
-      <div id="hero">
-        <div class="chrome">Star Race</div>
-        <div class="dreams">The Video Game</div>
-      </div>
-    </section>
-    <section>
-      <h4 class="hero-text">Arrows to move / Avoid the potholes</h4>
-      <div id="start-btn">
-        <p class="start-text">Choose a difficulty</p>
-        <div class="difficulty" onclick="startGame('SLOW')">Slow</div>
-        <div class="difficulty" onclick="startGame('FAST')">Fast</div>
-        <div class="difficulty" onclick="startGame('INSANE')">Insane</div>
-      </div>
-    </section>
-    <section>
-      <div id="game-box">
-        <div id="car" class="center">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Teko&family=Titillium+Web:wght@900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./public/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./public/style.css" />
+
+    <title>Star Race</title>
+  </head>
+  <body>
+    <main id="game-container" class="wrapper">
+      <section>
+        <div id="hero">
+          <div class="chrome">Star Race</div>
+          <div class="dreams">The Video Game</div>
         </div>
-        <div id="lanes">
-          <div id="finish-line">
+      </section>
+      <section>
+        <h4 class="hero-text">Arrows to move / Avoid the potholes</h4>
+        <div id="start-btn">
+          <p class="start-text">Choose a difficulty</p>
+          <div class="difficulty" onclick="startGame('SLOW')">Slow</div>
+          <div class="difficulty" onclick="startGame('FAST')">Fast</div>
+          <div class="difficulty" onclick="startGame('INSANE')">Insane</div>
+        </div>
+      </section>
+      <section>
+        <div id="game-box">
+          <div id="left-btn"></div>
+          <div id="right-btn"></div>
+          <div id="car" class="center"></div>
+          <div id="lanes">
+            <div id="finish-line"></div>
+          </div>
+          <div id="score-box">
+            Potholes Avoid
+            <br />
+            <span id="score">0</span>
+          </div>
+          <div id="gauge" class="gauge-one"></div>
+          <div id="end-dead">
+            <p class="end-p">You may want to get your alignment checked out.</p>
+          </div>
+          <div id="end-finish">
+            <h3 class="finish-h3">Star Race</h3>
+            <p class="end-p">Complimentary Aligment Check</p>
+            <h2 class="finish-h2">
+              <strong class="finish-strong">+10% Off</strong>
+              <br />
+              If you liked it leave a star.
+            </h2>
+            <a href="" class="offer-btn">Get This Service</a>
+            <p class="offer-disc">
+              Present upon arrival. Per axle. One per customer. No cash value.
+              Max value $[XXX]. No further discounts apply. See dealer for
+              details. Expires %%todaysDatePlus30%%.
+            </p>
+          </div>
+          <div id="game-over">
+            <h3 class="finish-h3">Game Over</h3>
+            <p class="end-p">You have failed.</p>
+            <a href="" class="offer-btn">Get This Service</a>
+            <p class="offer-disc">
+              Present upon arrival. Per axle. One per customer. No cash value.
+              Max value $[XXX]. No further discounts apply. See dealer for
+              details. Expires %%todaysDatePlus30%%.
+            </p>
           </div>
         </div>
-        <div id="score-box">
-          Potholes Avoid
-          <br>
-          <span id="score">0</span>
-        </div>  
-        <div id="gauge" class="gauge-one">
-        </div>      
-        <div id="end-dead">
-          <p class="end-p">
-            You may want to get your alignment checked out.
-          </p>                   
-        </div>
-        <div id="end-finish">
-          <h3 class="finish-h3">Star Race</h2>
-          <p class="end-p">Complimentary Aligment Check</p>
-          <h2 class="finish-h2">
-            <strong class="finish-strong">+10% Off</strong>
-            <br>
-            If you liked it leave a star.
-          </h2>
-          <a href="https://github.com/fariasmateuss/star-race" class="offer-btn">Get This Service</a>
-          <p class="offer-disc">Present upon arrival. Per axle. One per customer. No cash value. Max value $[XXX]. No further discounts apply. See dealer for details. Expires %%todaysDatePlus30%%.</p>
-        </div>
-          <div id="leftBtn"></div>
-          <div id="rightBtn"></div>
-        </div>   
-      </div>
-    </section>
-  </main>
-  <script src="./app/app.js"></script>
-</body>
+      </section>
+    </main>
+    <script src="./src/App.js"></script>
+    <script src="./src/TouchController.js"></script>
+    <script src="./src/KeyController.js"></script>
+  </body>
 </html>

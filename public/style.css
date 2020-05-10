@@ -1,18 +1,39 @@
-@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:900);
-
 :root {
   --pink: #f21d7a;
   --aqua: aqua;
-  --car: url(/app/img/car.png);
+  --car: url(./assets/car.png);
   --borderAnimation: border 1s linear infinite;
   --animationTime: 1.5s;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 14px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #d4d4d4;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #8d8d8d;
+  border-radius: 7px;
+  border-left: 4px solid #d4d4d4;
+  border-right: 4px solid #d4d4d4;
+  width: 24px;
+}
+
+a {
+  text-decoration: none;
 }
 
 #game-container {
@@ -25,7 +46,7 @@ body {
   perspective: 600px;
   font-family: monospace;
   color: white;
-  transform: scale(1); 
+  transform: scale(1);
 }
 
 .hero-text {
@@ -50,7 +71,7 @@ body {
   margin: 25px 0;
 }
 
-#game-box:after {
+#game-box::after {
   content: '';
   width: 100%;
   height: 100%;
@@ -64,27 +85,27 @@ body {
   z-index: 1;
 }
 
-.ouch:after {
-  background-color: rgba(255,0,0,.25);
-  animation: ouch .5s linear forwards !important;
+.ouch::after {
+  background-color: rgba(255, 0, 0, 0.25);
+  animation: ouch 0.5s linear forwards !important;
 }
 
 @keyframes ouch {
-  25% { 
+  25% {
     transform: rotate(1deg);
   }
 
-  50% { 
+  50% {
     transform: rotate(-1deg);
   }
 
-  75% { 
+  75% {
     transform: rotate(1deg);
   }
 }
 
 #lanes {
-  width: 66%; 
+  width: 66%;
   height: 200%;
   margin-top: -35%;
   background-size: 100% 200px;
@@ -93,19 +114,19 @@ body {
   position: relative;
   transform: rotateX(75deg);
   background-size: 100% 10%;
-  transition: .25s;
+  transition: 0.25s;
 }
 
-#lanes:before {
+#lanes::before {
   width: 110%;
   height: 100%;
-  background: 
-    linear-gradient(
-      to bottom, 
-      rgba(0,255,255,.75) 10%, 
-      transparent 10%, 
-      transparent 90%, 
-      rgba(0,255,255,.75) 90%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 255, 255, 0.75) 10%,
+    transparent 10%,
+    transparent 90%,
+    rgba(0, 255, 255, 0.75) 90%
+  );
 
   background-size: 100% 100px;
   content: '';
@@ -116,17 +137,18 @@ body {
   animation: var(--borderAnimation);
 }
 
-#lanes:after {
+#lanes::after {
   width: 100%;
   height: 100%;
   background: transparent;
-  background: 
-    linear-gradient(
-      to right, 
-      transparent 33.33%, 
-      rgba(255,255,255,.05) 33.33%, 
-      rgba(255,255,255,.05) 66.33%, transparent 66.33%), 
-      linear-gradient(to bottom, #000f1e, #00143e);
+  background: linear-gradient(
+      to right,
+      transparent 33.33%,
+      rgba(255, 255, 255, 0.05) 33.33%,
+      rgba(255, 255, 255, 0.05) 66.33%,
+      transparent 66.33%
+    ),
+    linear-gradient(to bottom, #000f1e, #00143e);
   content: '';
   position: absolute;
   top: 0;
@@ -135,8 +157,8 @@ body {
 }
 
 @keyframes border {
-  100% { 
-    background-position: 0 600px; 
+  100% {
+    background-position: 0 600px;
   }
 }
 
@@ -152,11 +174,12 @@ body {
 }
 
 #score {
+  font-family: sans-serif;
   font-size: 60px;
   line-height: 100%;
 }
 
-#car{
+#car {
   width: 100px;
   height: 100px;
   background: red;
@@ -189,11 +212,8 @@ body {
   position: absolute;
   transform-style: preserve-3d;
   background: #f21d7a;
-  box-shadow: 
-    0 0 0 1px aqua,  
-    inset 0 3px 0 3px 
-    rgba(0,155,155,1),
-    inset 0 8px 0 8px rgba(0,100,100,1);
+  box-shadow: 0 0 0 1px aqua, inset 0 3px 0 3px rgba(0, 155, 155, 1),
+    inset 0 8px 0 8px rgba(0, 100, 100, 1);
 }
 
 .enemy0 {
@@ -203,12 +223,12 @@ body {
 }
 
 @keyframes enemy1 {
-  100% { 
-    opacity: 1; 
+  100% {
+    opacity: 1;
     left: 25%;
-    top: 110%; 
+    top: 110%;
     width: 100px;
-    height: 60px; 
+    height: 60px;
     transform: translatex(-50%);
   }
 }
@@ -221,12 +241,12 @@ body {
 }
 
 @keyframes enemy2 {
-  100% { 
-    opacity: 1; 
-    top: 110%; 
+  100% {
+    opacity: 1;
+    top: 110%;
     transform: translateX(-17.5%);
-    width:100px; 
-    height:60px;
+    width: 100px;
+    height: 60px;
   }
 }
 
@@ -237,16 +257,16 @@ body {
 }
 
 @keyframes enemy3 {
-  100% { 
-    opacity: 1; 
-    left: 75%; 
-    top: 110%; 
-    width: 100px; 
+  100% {
+    opacity: 1;
+    left: 75%;
+    top: 110%;
+    width: 100px;
     height: 60px;
   }
 }
 
-#game-box:before {
+#game-box::before {
   content: '';
   width: 100%;
   height: 100%;
@@ -257,27 +277,27 @@ body {
   background-position: 0% 50%;
   background-repeat: no-repeat;
   z-index: 1;
-  opacity: .5;
+  opacity: 0.5;
 }
 
-.cracked-one:before {
-  background-image: url(/app/assets/cracked-one.png)
+.cracked-one::before {
+  background-image: url(./assets/cracked-one.png);
 }
 
-.cracked-two:before {
-  background-image: url(/app/assets/cracked-two.png)
+.cracked-two::before {
+  background-image: url(./assets/cracked-two.png);
 }
 
 .cracked-three:before {
-  background-image: url(/app/assets/cracked-three.png)
+  background-image: url(./assets/cracked-three.png);
 }
 
-.cracked-four:before {
-  background-image: url(/app/assets/cracked-four.png)
+.cracked-four::before {
+  background-image: url(./assets/cracked-four.png);
 }
 
-.cracked-five:before {
-  background-image: url(/app/assets/cracked-five.png)
+.cracked-five::before {
+  background-image: url(./assets/cracked-five.png);
 }
 
 #gauge {
@@ -286,64 +306,65 @@ body {
   position: absolute;
   bottom: -3.5%;
   left: 50%;
-  transform: translateX(-50%) scale(.75);
+  transform: translateX(-50%) scale(0.75);
   z-index: 2;
 }
 
 .gauge-one {
-  background-image: url(/app/assets/gauge-one.png);  
+  background-image: url(./assets/gauge-one.png);
 }
 
 .gauge-two {
-  background-image: url(/app/assets/gauge-two.png);
+  background-image: url(./assets/gauge-two.png);
   animation: wha 1s linear forwards;
 }
 
 .gauge-three {
-  background-image:url(/app/assets/gauge-three.png);
+  background-image: url(./assets/gauge-three.png);
   animation: wha2 1s linear forwards;
 }
 
 .gauge-four {
-  background-image:url(/app/assets/gauge-four.png);
+  background-image: url(./assets/gauge-four.png);
   animation: wha3 1s linear forwards;
 }
 
 .gauge-five {
-  background-image:url(/app/assets/gauge-five.png);
+  background-image: url(./assets/gauge-five.png);
   animation: wha4 1s linear infinite;
 }
 
 @keyframes wha {
-  50% { 
-    transform: translateX(-50%) scale(.65);
+  50% {
+    transform: translateX(-50%) scale(0.65);
   }
 }
 
 @keyframes wha2 {
-  50% { 
-    transform: translateX(-50%) scale(.65); 
+  50% {
+    transform: translateX(-50%) scale(0.65);
   }
 }
 
 @keyframes wha3 {
-  50% { 
-    transform: translateX(-50%) scale(.65); 
+  50% {
+    transform: translateX(-50%) scale(0.65);
   }
 }
 
 @keyframes wha4 {
-  50% { 
-    filter: invert(1); 
+  50% {
+    filter: invert(1);
   }
 }
 
-#end-dead, 
-#end-finish {
+#end-dead,
+#end-finish,
+#game-over {
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: 3;
   padding: 10px 20px 10px 15px;
   color: black;
@@ -359,7 +380,8 @@ body {
   max-width: 275px;
 }
 
-#end-finish {
+#end-finish,
+#game-over {
   font-size: 50px;
   width: 100%;
   max-width: 320px;
@@ -413,8 +435,9 @@ body {
   font-size: 60px;
 }
 
-#end-dead, 
-#end-finish {
+#end-dead,
+#end-finish,
+#game-over {
   display: none;
   cursor: inherit;
 }
@@ -425,40 +448,40 @@ body {
 }
 
 @keyframes end {
-  0% { 
-    transform: translate(-50%,-50%) scale(.1) 
+  0% {
+    transform: translate(-50%, -50%) scale(0.1);
   }
 
-  75% { 
-    transform: translate(-50%,-50%) scale(1.15); 
+  75% {
+    transform: translate(-50%, -50%) scale(1.15);
   }
 
-  100% { 
-    transform:  translate(-50%,-50%) scale(1); 
+  100% {
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 
-#end-dead{
+#end-dead {
   color: #f008b7;
   text-shadow: 2px 2px black;
 }
 
 .wrapper {
-  background:  
-    radial-gradient(
-    ellipse at center,
-  rgba(0,0,0,0.6) 80%, 
-  rgba(0,0,0,1) 100%), 
-    url(/app/img/bg.jpg);
+  background: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 0.6) 80%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url(./assets/background.jpg);
   background-size: cover;
   min-height: 100vh;
   overflow: hidden;
-  perspective: 1200px; 
+  perspective: 1200px;
 }
 
 #hero {
   position: relative;
-  transform: scale(.65);
+  transform: scale(0.65);
   z-index: 1;
 }
 
@@ -486,28 +509,28 @@ body {
   z-index: 20;
 }
 
-#leftBtn, 
-#rightBtn {
+#left-btn,
+#right-btn {
   width: 50%;
   height: 100%;
   position: absolute;
   bottom: 0;
   background-color: transparent;
-  z-index: 1;
+  z-index: 3;
   opacity: 0;
   display: none;
 }
 
-#leftBtn {
+#left-btn {
   left: 0;
 }
 
-#rightBtn {
+#right-btn {
   right: 0;
 }
 
-#leftBtn:after, 
-#rightBtn:after {
+#left-btn::after,
+#right-btn::after {
   content: '<';
   position: absolute;
   font-size: 100px;
@@ -517,7 +540,7 @@ body {
   top: 60%;
 }
 
-#rightBtn:after {  
+#right-btn::after {
   content: '>';
   text-align: left;
   left: 50px;
@@ -526,10 +549,9 @@ body {
 #finish-line {
   width: 100%;
   height: 30px;
-  background-image: 
-    linear-gradient(45deg, var(--pink) 25%, transparent 25%), 
-    linear-gradient(-45deg, var(--pink) 25%, transparent 25%), 
-    linear-gradient(45deg, transparent 75%, var(--pink) 75%), 
+  background-image: linear-gradient(45deg, var(--pink) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--pink) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--pink) 75%),
     linear-gradient(-45deg, transparent 75%, var(--pink) 75%);
   background-size: 20px 20px;
   background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
@@ -543,13 +565,13 @@ body {
 }
 
 @keyframes finish {
-  0% { 
-    opacity: 1; 
+  0% {
+    opacity: 1;
   }
 
-  100% { 
+  100% {
     top: 100%;
-    opacity:1 
+    opacity: 1;
   }
 }
 
@@ -560,7 +582,7 @@ body {
   color: black;
   line-height: 100%;
   font-family: 'Titillium Web', sans-serif;
-  font-style: italic;  
+  font-style: italic;
   background: white;
   border-radius: 10px;
   box-shadow: 4px 4px #f008b7;
@@ -570,7 +592,7 @@ body {
 }
 
 .start-text {
-  margin: 0 0 10px 0;  
+  margin: 0 0 10px 0;
   font-size: 18px;
   text-shadow: none;
   font-family: monospace;
@@ -590,14 +612,40 @@ body {
 }
 
 .start-off {
-  opacity: .15;
+  opacity: 0.15;
   pointer-events: none;
   user-select: none;
 }
 
-@media screen and (max-width:900px) {
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
+
+@media screen and (max-width: 900px) {
   #game-box {
-    transform:  scale(.75) translateY(-25px);
+    transform: scale(0.45) translateY(-25px);
     margin: 0;
   }
 
@@ -605,13 +653,13 @@ body {
     margin-top: -25px;
   }
 
-  #hero { 
-   transform: scale(.30);
+  #hero {
+    transform: scale(0.3);
   }
 
-  #leftBtn,
-  #rightBtn {
-    opacity: .25;
+  #left-btn,
+  #right-btn {
+    opacity: 0.25;
     display: block;
   }
 }
