@@ -71,38 +71,28 @@ function startGame(speed) {
     .querySelectorAll('.enemy')
     .length;
 
-  root
-    .style
-    .setProperty('--borderAnimation', 'border 1s linear infinite');
+  root.style.setProperty('--borderAnimation', 'border 1s linear infinite');
   
   let hitCheck = 5;
 
   if (speed == 'SLOW') {
-    root
-      .style
-      .setProperty('--animationTime', '1.5s');  
+    root.style.setProperty('--animationTime', '1.5s');  
   }
   
   if (speed == 'FAST') {
-    root
-      .style
-      .setProperty('--animationTime', '1s');
+    root.style.setProperty('--animationTime', '1s');
   }
   
   if(speed == 'INSANE') {
     let hitCheck = 10;
 
-    root
-    .style
-    .setProperty('--animationTime', '.75s');
+    root.style.setProperty('--animationTime', '.75s');
   }    
   
   const run = setInterval(buildEnemy, 1500);
   const hit = setInterval(ouchy, 1000/hitCheck);
   
-  btn
-    .classList
-    .add('start-off');
+  btn.classList.add('start-off');
 
   document
     .getElementById('end-finish')
@@ -156,13 +146,9 @@ function startGame(speed) {
           .classList
           .add('end-on');
 
-        btn
-          .classList
-          .remove('start-off');
+        btn.classList.remove('start-off');
           
-        root
-          .style
-          .setProperty('--borderAnimation', 'none');
+        root.style.setProperty('--borderAnimation', 'none');
       }, 2000);  
     }  
   
@@ -185,64 +171,40 @@ function startGame(speed) {
       
       enemy[i].remove();
       
-      box
-        .classList
-        .add('ouch');
+      box.classList.add('ouch');
       
       setTimeout(() => {
-        box
-          .classList
-          .remove('ouch');
+        box.classList.remove('ouch');
       }, 750);
 
       if (hits == 2) {
-        box
-          .classList
-          .add('cracked-one');
+        box.classList.add('cracked-one');
 
-        gauge
-          .classList
-          .add('gauge-two');
+        gauge.classList.add('gauge-two');
       }
 
       if(hits == 4) {
-        box
-          .classList
-          .add('cracked-two');
+        box.classList.add('cracked-two');
 
-        gauge
-          .classList
-          .add('gauge-three');
+        gauge.classList.add('gauge-three');
       }
 
       if (hits == 6) {
-        box
-          .classList
-          .add('cracked-three');
+        box.classList.add('cracked-three');
         
-        gauge
-          .classList
-          .add('gauge-four');
+        gauge.classList.add('gauge-four');
       }
       
       if (hits == 8) {
-        box
-          .classList
-          .add('cracked-four');
+        box.classList.add('cracked-four');
         
-        gauge
-          .classList
-          .add('gauge-five');
+        gauge.classList.add('gauge-five');
       }
 
       if (hits >= 9) {
-        box
-          .classList
-          .add('cracked-five');
+        box.classList.add('cracked-five');
 
-        gauge
-          .classList
-          .add('gauge-five');
+        gauge.classList.add('gauge-five');
       }      
     }  
 
