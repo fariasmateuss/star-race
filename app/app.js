@@ -26,7 +26,7 @@ window.addEventListener('keyup', e => {
 })
 
 window.addEventListener('click', e => {
-  if (e.target.id === 'leftBtn') {
+  if (e.target.id === 'left-btn') {
     if (car.className === 'center') {
       car.className = 'left'
     }
@@ -36,7 +36,7 @@ window.addEventListener('click', e => {
     }
   }
 
-  if (e.target.id === 'rightBtn') {
+  if (e.target.id === 'right-btn') {
     if (car.className === 'center') {
       car.className = 'right'
     }
@@ -152,9 +152,9 @@ function startGame (speed) {
       const b = car.getBoundingClientRect()
       const ouch = !(
         a.right < b.left ||
-      a.left > b.right ||
-      a.bottom < b.top ||
-      a.top > b.bottom
+        a.left > b.right ||
+        a.bottom < b.top ||
+        a.top > b.bottom
       )
 
       if (ouch) {
