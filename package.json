@@ -1,0 +1,24 @@
+{
+  "name": "star-race",
+  "version": "1.0.0",
+  "description": "Star Race. The Video Game.>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fariasmateuss/star-race.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fariasmateuss/star-race/issues"
+  },
+  "homepage": "https://github.com/fariasmateuss/star-race#readme",
+  "devDependencies": {
+    "serve": "^11.3.0",
+    "server": "^1.0.27"
+  }
+}
