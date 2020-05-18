@@ -14,9 +14,8 @@
 
 ## Development setup
 
-> Node Js is required. I used the package `serve` to run it in the browser through a node server.
-
 ```sh
+  // Node Js is required. I used the package `serve` to run it in the browser through a node server.
   $ npm init -y 
   $ npm install serve -D 
   $ npx serve . 

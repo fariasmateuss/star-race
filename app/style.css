@@ -493,7 +493,7 @@ body {
   position: absolute;
   bottom: 0;
   background-color: transparent;
-  z-index: 99999999999999;
+  z-index: 3;
   opacity: 0;
   display: none;
 }
@@ -549,7 +549,7 @@ body {
 
   100% { 
     top: 100%;
-    opacity:1 
+    opacity: 1;
   }
 }
 
