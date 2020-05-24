@@ -12,10 +12,21 @@
   
 </div>
 
-## Development setup
+## Getting Started
+
+### Prerequisites
+
+NodeJs is required. I used the package `serve` to run it in the browser through a node server.
+
+**Cloning the Repository**
+
+```
+$ git clone https://github.com/fariasmateuss/star-race.git
+```
+
+### Installing 
 
 ```sh
-  // Node Js is required. I used the package `serve` to run it in the browser through a node server.
   $ npm init -y 
   $ npm install serve -D 
   $ npx serve . 
