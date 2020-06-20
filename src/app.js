@@ -50,7 +50,7 @@ window.addEventListener('click', e => {
 const btn = document.querySelector('#start-btn');
 const root = document.documentElement;
 
-function startGame (speed) {
+function startGame(speed) {
   const en = document.querySelectorAll('.enemy');
 
   for (let i = 0; i < en.length; i++) {
@@ -60,11 +60,9 @@ function startGame (speed) {
   let hits = 0;
   let holes = 52;
 
-  document
-    .querySelector('#score')
-    .innerHTML = document
-      .querySelectorAll('.enemy')
-      .length;
+  document.querySelector('#score').innerHTML = document.querySelectorAll(
+    '.enemy',
+  ).length;
 
   root.style.setProperty('--borderAnimation', 'border 1s linear infinite');
 
@@ -87,12 +85,9 @@ function startGame (speed) {
 
   btn.classList.add('start-off');
 
-  document
-    .getElementById('end-finish')
-    .classList
-    .remove('end-on');
+  document.getElementById('end-finish').classList.remove('end-on');
 
-  function enemy () {
+  function enemy() {
     const div = document.createElement('div');
     const num = Math.random() < 0.5 ? 'enemy1' : 11;
 
@@ -107,37 +102,29 @@ function startGame (speed) {
     holes--;
   }
 
-  function buildEnemy () {
+  function buildEnemy() {
     for (let i = 0; i < 2; i++) {
       enemy();
     }
   }
 
-  function ouchy () {
+  function ouchy() {
     if (holes < 1) {
-      document
-        .getElementById('finish-line')
-        .classList
-        .add('finish-line');
+      document.getElementById('finish-line').classList.add('finish-line');
 
       document
         .querySelectorAll('.enemy')
-        [document.querySelectorAll('.enemy').length - 2]
-        .remove();
+        [document.querySelectorAll('.enemy').length - 2].remove();
 
       document
         .querySelectorAll('.enemy')
-        [document.querySelectorAll('.enemy').length - 1]
-        .remove();
+        [document.querySelectorAll('.enemy').length - 1].remove();
 
       clearInterval(hit);
       clearInterval(run);
 
       setTimeout(() => {
-        document
-          .getElementById('end-finish')
-          .classList
-          .add('end-on');
+        document.getElementById('end-finish').classList.add('end-on');
 
         btn.classList.remove('start-off');
 
@@ -167,7 +154,7 @@ function startGame (speed) {
         box.classList.add('ouch');
 
         setTimeout(() => {
-          box.classList.remove('ouch')
+          box.classList.remove('ouch');
         }, 750);
 
         if (hits === 2) {
@@ -201,11 +188,9 @@ function startGame (speed) {
         }
       }
 
-      document
-        .querySelector('#score')
-        .innerHTML = document
-          .querySelectorAll('.enemy')
-          .length;
+      document.querySelector('#score').innerHTML = document.querySelectorAll(
+        '.enemy',
+      ).length;
     }
   }
 }

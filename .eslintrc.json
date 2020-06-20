@@ -1,9 +1,12 @@
 {
   "env": {
-    "browser": true,
-    "es2020": true
+    "browser": true
   },
   "extends": ["airbnb-base", "prettier"],
+  "linebreak-style": ["error", "windows"],
+  "quotes": ["error", "double"],
+  "arrow-parens": ["error", "as-needed"],
+  "comma-dangle": ["error", "never"],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 11,
