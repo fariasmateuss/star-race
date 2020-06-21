@@ -3,8 +3,8 @@ const lane = document.getElementById('lanes');
 const gauge = document.getElementById('gauge');
 const car = document.querySelector('#car');
 
-window.addEventListener('keyup', e => {
-  if (e.keyCode === 37) {
+window.addEventListener('keyup', event => {
+  if (event.keyCode === 37) {
     if (car.className === 'center') {
       car.className = 'left';
     }
@@ -14,7 +14,7 @@ window.addEventListener('keyup', e => {
     }
   }
 
-  if (e.keyCode === 39) {
+  if (event.keyCode === 39) {
     if (car.className === 'center') {
       car.className = 'right';
     }
@@ -25,8 +25,8 @@ window.addEventListener('keyup', e => {
   }
 });
 
-window.addEventListener('click', e => {
-  if (e.target.id === 'left-btn') {
+window.addEventListener('click', event => {
+  if (event.target.id === 'left-btn') {
     if (car.className === 'center') {
       car.className = 'left';
     }
@@ -36,7 +36,7 @@ window.addEventListener('click', e => {
     }
   }
 
-  if (e.target.id === 'right-btn') {
+  if (event.target.id === 'right-btn') {
     if (car.className === 'center') {
       car.className = 'right';
     }
@@ -73,11 +73,11 @@ function startGame(speed) {
   }
 
   if (speed === 'FAST') {
-    root.style.setProperty('--animationTime', '1s');
+    root.style.setProperty('--animationTime', '0.80s');
   }
 
   if (speed === 'INSANE') {
-    root.style.setProperty('--animationTime', '.75s');
+    root.style.setProperty('--animationTime', '0.60s');
   }
 
   const run = setInterval(buildEnemy, 1500);
