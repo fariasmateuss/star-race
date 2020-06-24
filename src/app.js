@@ -51,10 +51,10 @@ const btn = document.querySelector('#start-btn');
 const root = document.documentElement;
 
 function startGame(speed) {
-  const en = document.querySelectorAll('.enemy');
+  const enemy = document.querySelectorAll('.enemy');
 
-  for (let i = 0; i < en.length; i++) {
-    en[i].remove();
+  for (let i = 0; i < enemy.length; i++) {
+    enemy[i].remove();
   }
 
   let hits = 0;
@@ -87,7 +87,7 @@ function startGame(speed) {
 
   document.getElementById('end-finish').classList.remove('end-on');
 
-  function enemy() {
+  function handleEnemy() {
     const div = document.createElement('div');
     const num = Math.random() < 0.5 ? 'enemy1' : 11;
 
@@ -104,7 +104,7 @@ function startGame(speed) {
 
   function buildEnemy() {
     for (let i = 0; i < 2; i++) {
-      enemy();
+      handleEnemy();
     }
   }
 
