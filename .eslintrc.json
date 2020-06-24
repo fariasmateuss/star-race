@@ -3,6 +3,7 @@
     "browser": true
   },
   "extends": ["airbnb-base", "prettier"],
+  "plugins": ["prettier"],
   "linebreak-style": ["error", "windows"],
   "quotes": ["error", "double"],
   "arrow-parens": ["error", "as-needed"],
@@ -12,5 +13,7 @@
     "ecmaVersion": 11,
     "sourceType": "module"
   },
-  "rules": {}
+  "rules": {
+    "prettier/prettier": ["error"]
+  },
 }
