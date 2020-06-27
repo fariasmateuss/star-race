@@ -61,7 +61,7 @@ function startGame(speed) {
   let holes = 52;
 
   document.querySelector('#score').innerHTML = document.querySelectorAll(
-    '.enemy',
+    '.enemy'
   ).length;
 
   root.style.setProperty('--borderAnimation', 'border 1s linear infinite');
@@ -92,7 +92,7 @@ function startGame(speed) {
     const num = Math.random() < 0.5 ? 'enemy1' : 11;
 
     if (num === 11) {
-      div.className = 'enemy enemy' + Math.floor(Math.random() * 3);
+      div.className = `enemy enemy${Math.floor(Math.random() * 3)}`;
     } else {
       div.className = 'enemy enemy1';
     }
@@ -189,7 +189,7 @@ function startGame(speed) {
       }
 
       document.querySelector('#score').innerHTML = document.querySelectorAll(
-        '.enemy',
+        '.enemy'
       ).length;
     }
   }
