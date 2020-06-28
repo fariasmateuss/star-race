@@ -2,51 +2,6 @@ const box = document.getElementById('game-box');
 const lane = document.getElementById('lanes');
 const gauge = document.getElementById('gauge');
 const car = document.querySelector('#car');
-
-window.addEventListener('keyup', event => {
-  if (event.keyCode === 37) {
-    if (car.className === 'center') {
-      car.className = 'left';
-    }
-
-    if (car.className === 'right') {
-      car.className = 'center';
-    }
-  }
-
-  if (event.keyCode === 39) {
-    if (car.className === 'center') {
-      car.className = 'right';
-    }
-
-    if (car.className === 'left') {
-      car.className = 'center';
-    }
-  }
-});
-
-window.addEventListener('click', event => {
-  if (event.target.id === 'left-btn') {
-    if (car.className === 'center') {
-      car.className = 'left';
-    }
-
-    if (car.className === 'right') {
-      car.className = 'center';
-    }
-  }
-
-  if (event.target.id === 'right-btn') {
-    if (car.className === 'center') {
-      car.className = 'right';
-    }
-
-    if (car.className === 'left') {
-      car.className = 'center';
-    }
-  }
-});
-
 const btn = document.querySelector('#start-btn');
 const root = document.documentElement;
 
@@ -88,18 +43,18 @@ function startGame(speed) {
   document.getElementById('end-finish').classList.remove('end-on');
 
   function handleEnemy() {
-    const div = document.createElement('div');
-    const num = Math.random() < 0.5 ? 'enemy1' : 11;
+    const createDiv = document.createElement('div');
+    const positions = Math.random() < 0.5 ? 'enemy1' : 11;
 
-    if (num === 11) {
-      div.className = `enemy enemy${Math.floor(Math.random() * 3)}`;
+    if (positions === 11) {
+      createDiv.className = `enemy enemy${Math.floor(Math.random() * 3)}`;
     } else {
-      div.className = 'enemy enemy1';
+      createDiv.className = 'enemy enemy1';
     }
 
-    lane.appendChild(div);
+    lane.appendChild(createDiv);
 
-    holes--;
+    holes -= 1;
   }
 
   function buildEnemy() {
@@ -145,7 +100,7 @@ function startGame(speed) {
       );
 
       if (ouch) {
-        hits++;
+        hits += 1;
 
         console.log('ouch');
 
