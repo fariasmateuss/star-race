@@ -28,3 +28,8 @@ Tag can be:
 - ```Style``` formatting, no code change.
 - ```Doc``` changes to documentation.
 - ```Test``` adding or refactoring tests; no production code change
+
+Remember to:
+
+- Capitalize the subject line.
+- Use the imperative mood in the subject line.
