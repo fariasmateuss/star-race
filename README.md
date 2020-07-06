@@ -1,14 +1,8 @@
-<div align="center">
+# STAR RACE
 
-  <h1>
-   🚀 <i>STAR RACE</i>
-  </h1>
+Game build with HTML5, CSS3 and JavaScript
 
-  <p>
-  Game build with HTML5, CSS3 and JavaScript
-  </p>
-
-  <img src=".github/thumbnail.png">
+<img src=".github/thumbnail.png">
 
 </div>
 
@@ -21,14 +15,14 @@ NodeJs is required. I used the package `serve` to run it in the browser through 
 **Cloning the Repository**
 
 ```
-$ git clone https://github.com/fariasmateuss/star-race.git
+git clone https://github.com/fariasmateuss/star-race.git
 ```
 
 ### Installing
 
 ```sh
-  $ npm install serve -D
-  $ npx serve .
+  npm install serve -D
+  npx serve .
 ```
 
 Open the game on localhost or your network address.
