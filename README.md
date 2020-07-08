@@ -1,10 +1,4 @@
-# STAR RACE
-
-Game build with HTML5, CSS3 and JavaScript
-
 <img src=".github/thumbnail.png">
-
-</div>
 
 ## Getting Started
 
