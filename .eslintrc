@@ -4,7 +4,6 @@
     "commonjs": true,
     "es2020": true
   },
-  "no-plusplus": "off",
   "extends": ["airbnb-base", "plugin:prettier/recommended", "prettier"],
   "parserOptions": {
     "ecmaVersion": 11
@@ -12,5 +11,7 @@
   "plugins": ["prettier"],
   "rules": {
     "prettier/prettier": "error"
-  }
+  },
+  "no-plusplus": "off",
+  "no-console": "off"
 }
