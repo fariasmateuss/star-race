@@ -16,7 +16,7 @@ function startGame(speed) {
   let holes = 52;
 
   document.querySelector('#score').innerHTML = document.querySelectorAll(
-    '.enemy'
+    '.enemy',
   ).length;
 
   root.style.setProperty('--borderAnimation', 'border 1s linear infinite');
@@ -141,10 +141,21 @@ function startGame(speed) {
 
           gauge.classList.add('gauge-five');
         }
+
+        if (hits >= 10) {
+          clearInterval(hit);
+          clearInterval(run);
+
+          document.getElementById('game-over').classList.add('end-on');
+
+          btn.classList.remove('start-off');
+
+          root.style.setProperty('--borderAnimation', 'none');
+        }
       }
 
       document.querySelector('#score').innerHTML = document.querySelectorAll(
-        '.enemy'
+        '.enemy',
       ).length;
     }
   }

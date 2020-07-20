@@ -338,7 +338,8 @@ body {
 }
 
 #end-dead,
-#end-finish {
+#end-finish,
+#game-over {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -358,7 +359,8 @@ body {
   max-width: 275px;
 }
 
-#end-finish {
+#end-finish,
+#game-over {
   font-size: 50px;
   width: 100%;
   max-width: 320px;
@@ -413,7 +415,8 @@ body {
 }
 
 #end-dead,
-#end-finish {
+#end-finish,
+#game-over {
   display: none;
   cursor: inherit;
 }
