@@ -6,7 +6,7 @@
 
 NodeJs is required. I used the package `serve` to run it in the browser through a node server.
 
-**Cloning the Repository**
+#### Cloning the Repository
 
 ```
 git clone https://github.com/fariasmateuss/star-race.git
@@ -14,9 +14,18 @@ git clone https://github.com/fariasmateuss/star-race.git
 
 ### Installing
 
-```sh
-  npm install serve -D
+```
+  npm install && serve -D
+```
+
+```
   npx serve .
+```
+
+_or_
+
+```
+./node_modules/.bin/serve .
 ```
 
 Open the game on localhost or your network address.
