@@ -1,7 +1,7 @@
 :root {
   --pink: #f21d7a;
   --aqua: aqua;
-  --car: url(../img/car.png);
+  --car: url(../assets/car.png);
   --borderAnimation: border 1s linear infinite;
   --animationTime: 1.5s;
 }
@@ -451,7 +451,7 @@ body {
       rgba(0, 0, 0, 0.6) 80%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url(../img/bg.jpg);
+    url(../../assets/background.jpg);
   background-size: cover;
   min-height: 100vh;
   overflow: hidden;
