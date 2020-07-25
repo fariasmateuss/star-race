@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Game Star Race",
   "main": "index.html",
-  "dependencies": {
+  "scripts": {
+    "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}"
   },
+  "dependencies": {},
   "devDependencies": {
     "eslint": "^7.3.1",
     "eslint-config-airbnb-base": "^14.2.0",
