@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap');
+
 :root {
   --pink: #f21d7a;
   --aqua: aqua;
@@ -154,6 +156,7 @@ body {
 }
 
 #score {
+  font-family: sans-serif;
   font-size: 60px;
   line-height: 100%;
 }
@@ -451,7 +454,7 @@ body {
       rgba(0, 0, 0, 0.6) 80%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url(../../assets/background.jpg);
+    url(../assets/background.jpg);
   background-size: cover;
   min-height: 100vh;
   overflow: hidden;
