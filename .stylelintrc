@@ -8,6 +8,13 @@
     "stylelint-prettier"
   ],
   "rules": {
-    "prettier/prettier": true
+    "prettier/prettier": true,
+    "no-descending-specificity": null,
+    "length-zero-no-unit": null,
+    "no-duplicate-selectors": null,
+    "function-name-case": null,
+    "declaration-empty-line-before": null,
+    "declaration-block-no-duplicate-properties": null,
+    "selector-pseudo-element-colon-notation": null
   }
 }
