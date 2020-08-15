@@ -18,6 +18,8 @@ git clone https://github.com/fariasmateuss/star-race.git
   npm install && serve -D
 ```
 
+_and_
+
 ```
   npx serve .
 ```
@@ -29,6 +31,16 @@ _or_
 ```
 
 Open the game on localhost or your network address.
+
+### Formart
+
+Format all files CSS with StyleLintr:
+
+```npx stylelint "**/*.css"```
+
+Format all files with Prettier:
+
+```npx prettier --write .```
 
 ## Contribution
 
