@@ -16,18 +16,7 @@ If you don't know the language, then you can test it anyway and send an Issue to
 
 #### Formatting
 
-Format your PR titles likewise:
-
-> Tag: Describe change in present tense
-
-Tag can be:
-
-- ```Feat``` new feature.
-- ```Fix``` bug fix.
-- ```Refactor``` refactoring code.
-- ```Style``` formatting, no code change.
-- ```Doc``` changes to documentation.
-- ```Test``` adding or refactoring tests; no production code change
+[Format your commit titles likewise](https://gist.github.com/fariasmateuss/c8b3a2e1b8ae7c3cda520d0ac6e9e237)
 
 Remember to:
 
